@@ -8,7 +8,7 @@ const applyNightLightMode = function() {
     overlay.style.height = '100vh';
     overlay.style.pointerEvents = 'none';
     overlay.style.zIndex = 9999; // Make sure it's on top
-    overlay.style.backgroundColor = 'rgba(255, 180, 70, 0.2)'; // Warm orange tint
+    overlay.style.backgroundColor = 'rgba(255, 210, 95, 0.2)'; // Warm orange tint
     
     document.body.appendChild(overlay);
 };
