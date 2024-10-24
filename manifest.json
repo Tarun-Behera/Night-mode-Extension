@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Night Light Read Mode",
+    "version": "1.0",
+    "description": "Automatically switches light-themed websites to a night light mode for easier reading.",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    }
+  }
+  
