@@ -8,15 +8,29 @@
     <title>Night-Mode-Extension</title>
 </head>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
-            width: 200px;
+            width: 150px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            padding: 2px;
+            margin-top: 10px;
+            cursor: pointer;
         }
     </style>
     </head>
     <body>
         <h4>Night Mode Extension</h4>
-        <button id="toggleReadMode">Toggle Read Mode</button>
+        <button id="toggleNightMode">Toggle Read Mode</button>
        <script src="popup.js"></script>
     </body>
 </html>

@@ -1,17 +1,12 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.getElementById('toggleReadMode');
-  if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-      console.log("before");
-      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-        chrome.scripting.executeScript({
-          target: { tabId: tabs[0].id },
-          files: ['content.js']
-        });
-      });
-      console.log("after");
-    });
-  } else {
-    console.error("Button with id 'toggleReadMode' not found!");
-  }
+document.getElementById("toggleNightMode").addEventListener("click", async () => {
+  // Get the active tab
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  // Send a message to content.js to toggle night mode
+  chrome.tabs.sendMessage(tab.id, { action: "toggleNightMode" }, (response) => {
+    if (response?.status) {
+      console.log(response.status);
+    } else {
+      console.error("Error toggling Night Light mode");
+    }
+  });
 });
