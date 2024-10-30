@@ -1,4 +1,5 @@
 Night Mode Chrome Extension
+
 Overview
 This Chrome extension, "Night Mode," detects if a website is in light mode and applies a night light reading mode to make the content easier on the eyes.
 The extension checks the website's theme by analyzing its background luminance and then toggles night light mode accordingly.
