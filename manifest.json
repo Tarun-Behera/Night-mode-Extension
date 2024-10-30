@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Night Mode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically switches light-themed websites to a night light mode for easier reading.",
   "permissions": [
     "activeTab",
