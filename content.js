@@ -68,7 +68,7 @@ async function detectLightTheme() {
     (htmlLuminance !== null && htmlLuminance > 0.5)
   ) {
     console.log("Light mode detected");
-    alert("Applying Night mode.");
+    // alert("Applying Night mode.");
     applyNightLightMode();
   } else if (
     (bodyLuminance !== null && bodyLuminance <= 0.5) ||
@@ -78,7 +78,7 @@ async function detectLightTheme() {
     // alert("Night Light mode isn't suitable for dark themes.");
   } else {
     console.log("Theme could not be detected; assuming light mode.");
-    alert("Applying Night mode.");
+    // alert("Applying Night mode.");
     applyNightLightMode();
   }
 }
