@@ -90,9 +90,11 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === "toggleNightMode") {
     if (isNightLightActive) {
       removeNightLightMode(); // Remove night light mode if it's currently active
+      sendResponse({ status: "Night Mode Off" });
     } else {
       detectLightTheme(); // Detect light theme and apply night light mode
+      sendResponse({ status: "Night Mode On" });
     }
-    sendResponse({ status: "Night Light mode toggled" });
+    
   }
 });
